@@ -27,7 +27,7 @@ function getData() {
                 //Start code
                 console.log(firebase_message_id);
                 console.log(message_data);
-                name = message_data['name'];
+                user_name = message_data['name'];
                 message = message_data['message'];
                 like = message_data['like'];
                 name_with_tag = "<h4> " + name + "<img class='user_tick' src='tick.png'></h4>";
@@ -53,4 +53,17 @@ function send() {
         like: 0
     });
     document.getElementById("msg").value = "";
+}
+
+function updateLike(message_id) {
+    console.log("Clicked on like button- " + message_id);
+    button_id = message_id;
+    likes = document.getElementById(button_id).value;
+    updated_like = Number(likes) + 1;
+    console.log(updated_like);
+
+    firebase.database().ref(room_name).child(message_id).update({
+        like: updated_like
+    });
+
 }
