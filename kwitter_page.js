@@ -1,13 +1,14 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyCjT6k39OJeLk7y5MeHTd8BPLxTiYkz0i4",
-    authDomain: "let-schatwebsite.firebaseapp.com",
-    projectId: "let-schatwebsite",
-    storageBucket: "let-schatwebsite.appspot.com",
-    messagingSenderId: "921304359282",
-    appId: "1:921304359282:web:03af257ba5b783ee307deb"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+    apiKey: "AIzaSyAtnCtP3ddGv3y_AC-tM3OSQAFeY7N3Auw",
+    authDomain: "kwitter-final-database.firebaseapp.com",
+    databaseURL: "https://kwitter-final-database-default-rtdb.firebaseio.com",
+    projectId: "kwitter-final-database",
+    storageBucket: "kwitter-final-database.appspot.com",
+    messagingSenderId: "407535264076",
+    appId: "1:407535264076:web:d4f09d09a060ef2c86efe9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name");
